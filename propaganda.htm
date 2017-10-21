@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>Random Page Loading Example II</TITLE>
+<SCRIPT>
+<!-- Activate Cloaking Device
+
+
+// Set to number of pages available.
+var number=5;
+// Becomes generated random  number.
+var random_number=0;
+
+// Create and define arrays.
+link = new Array(5);
+link[0] = "propaganda1.htm";
+link[1] = "propaganda2.htm";
+link[2] = "propaganda3.htm";
+link[3] = "propaganda4.htm";
+link[4] = "propaganda5.htm";
+
+// Called by Load Random Page button - loads random page to current window.
+function loadRandomPage()
+   {
+   // Random number generating.
+     today=new Date();
+     jran=today.getTime();
+     ia=9301;
+     ic=49297;
+     im=233280;
+     jran = (jran*ia+ic) % im;
+     random_number=Math.ceil( (jran/(im*1.0)) *number);
+   // Load random page.
+     window.location=link[random_number-1];
+   }
+
+// Deactivate Cloaking -->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR=ffffff><center>
+<a href="propaganda.htm">
+<img src="pix\propaganda24.gif" border=0></a>
+<hr width=70%>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><hr width=70%>
+</center>
+<SCRIPT>
+<!-- Activate Cloaking Device
+timerID = setTimeout('loadRandomPage()',2000);
+// Deactivate Cloaking -->
+</SCRIPT>
+</BODY>
+</HTML>
